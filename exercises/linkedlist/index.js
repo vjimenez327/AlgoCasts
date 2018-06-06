@@ -30,6 +30,30 @@ class LinkedList {
     return count;
   }
 
+  getFirst(){
+    return this.head;
+  }
+
+  getLast(){
+
+    if (!this.head) {
+      return null;
+    }
+
+    let node = this.head;
+
+    while (node) {
+      if (!node.next) {
+        return node;
+      }
+      node = node.next;
+    }
+  }
+
+  clear() {
+    this.head = null;
+  }
+
 }
 
 
